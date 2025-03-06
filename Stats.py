@@ -30,3 +30,4 @@ players = {
         "stats": {"speed": 90, "shooting": 96, "passing": 85, "dribbling": 88},
 }
 }
+

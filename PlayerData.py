@@ -10,3 +10,4 @@ class Player:
         print("Stats:")
         for key, value in self.stats.items():
             print(f"  {key}: {value}")
+
