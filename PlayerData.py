@@ -11,3 +11,4 @@ class Player:
         for key, value in self.stats.items():
             print(f"  {key}: {value}")
 
+
