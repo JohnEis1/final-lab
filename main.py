@@ -33,36 +33,39 @@ textfile_data = ["TBD"]
 # fill this in later /\
 
 team_composition = {
-    "Arsenel" : [Player("John", "10")]
+    "Arsenel" : [Player("John", '10')]
 }
 #dictonary that stores  a teams info, which is a list of inctances of the class Player and stated beofre
-
-
 
 
 def position_maker():
     name = input("player name ")
     position = input("what position do you want your player to play ")
-    model_player = (name, position)
+    model_player = Player(name, position)
     return model_player
 #This function makes an instance of the class
 
-person1 = (position_maker())
+person1 = position_maker()
 print(person1)
 
-def player_checker(p1: person1.position) -> bool:
-    if p1 in positions:
-        return True
-    else:
-        return False and print("not a player")
-#This function tests if the player is an actual player and the user isn't just trolling
-
-def position_checker(p1: person1.name) -> bool:
+def player_checker(p1) -> bool:
     if p1 in lads:
         return True
     else:
-        return False and print("not a position")
+       print("not a player")
+       return False
+
+#This function tests if the player is an actual player and the user isn't just trolling
+
+def position_checker(p1) -> bool:
+    if p1 in positions:
+        return True
+    else:
+        print("not a position")
+        return False
 #This function tests if the position is an actual position and the user isn't just trolling
+
+print(player_checker(person1.name),position_checker(person1.position))
 
 def position_comparison(guy: Player, team:str) -> str:
 #This functions determines if a player should be swapped
@@ -79,6 +82,7 @@ def position_comparison(guy: Player, team:str) -> str:
     for dude in potential_swaps:
         if dude.speed > guy.speed:
             returnstr = returnstr + f"DON'T SWAP! {dude.speed} >>> {guy.speed}"
+
 # prototype for suggesting(or in this case not suggesting) a player for swap
 
 
@@ -98,7 +102,6 @@ def position_comparison(guy: Player, team:str) -> str:
 
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
