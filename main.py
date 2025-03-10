@@ -7,6 +7,7 @@ print('Players: John, Max')
 print('Teams: Lakers, Warriors')
 print('Positions: 1, 2, 3, 4, 5')
 #These print statements display to the user there options for the program
+#Max
 
 team = input("what team do you want them on ")
 # This sets the team that you would like to put your selected player on
@@ -20,6 +21,7 @@ def position_maker():
 #The point is for to things
 #1) select what position you want your player to play on
 #2) create a place to store both name and data which you can call on
+#John
 
 person1 = position_maker()
 print(person1)
@@ -32,6 +34,7 @@ def player_checker(p1) -> bool:
         print('not a real player')
         return False
 #This function tests if the player is an actual player and the user isn't just trolling
+#John
 
 def position_checker(p1) -> bool:
     if p1 in positions:
@@ -40,15 +43,19 @@ def position_checker(p1) -> bool:
         print('not a real position')
         return False
 #This function tests if the position is an actual position and the user isn't just trolling
+#John
 
 def team_checker(team1) -> bool:
     try:
         if team1 in teams:
             return True
+        else:
+            print('not a real team')
+            return False
     except KeyError:
-        print('not a real team')
         return False
 #This function tests if the position is an actual team and the user isn't just trolling
+#John
 
 print(player_checker(person1.name),position_checker(person1.position),team_checker(team))
 # This calls the checker functions, not exactly needed because these functions are called later, but nice when testing to see whats happening
@@ -65,8 +72,9 @@ def position_comparison_id(guy: Player, team1:str) -> list:
         return []
 #This functions determines if a player should be swapped, and makes a list of players to be swapped
 #As you can see, the team checker function is being called
+#John
 
-def swaps(guy1: Player, team2:str):
+def swaps(guy1: Player, team2:str) -> int:
     if position_comparison_id(guy1, team2) == []:
         return False
     if player_checker(person1.name) == False:
@@ -89,6 +97,7 @@ def swaps(guy1: Player, team2:str):
                 ynam = y.nombre
                 if bro == ynam:
                     player_object_bro = y
+                    #John
 
                     if current_name.speed > player_object_bro.speed:
                         counter += 1
@@ -103,6 +112,7 @@ def swaps(guy1: Player, team2:str):
             return counter
         else:
             print("don't swap")
+            #Max
 
 
 print(swaps(person1, team))
